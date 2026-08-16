@@ -821,8 +821,8 @@ html.codex-dream-skin .composer-surface-chrome [class*="_ComposerLayoutBody_"] >
 html.codex-dream-skin .qq-proxied-control {
   position: fixed !important;
   z-index: 5 !important;
-  left: var(--qq-proxy-left, -10000px) !important;
-  top: var(--qq-proxy-top, -10000px) !important;
+  left: var(--qq-proxy-left, 0px) !important;
+  top: var(--qq-proxy-top, 0px) !important;
   width: var(--qq-proxy-width, 28px) !important;
   min-width: var(--qq-proxy-width, 28px) !important;
   height: var(--qq-proxy-height, 28px) !important;
@@ -833,8 +833,8 @@ html.codex-dream-skin .qq-proxied-control {
 html.codex-dream-skin .composer-surface-chrome button.qq-proxied-control.qq-proxy-interactive {
   position: fixed !important;
   z-index: 9 !important;
-  left: var(--qq-proxy-left, -10000px) !important;
-  top: var(--qq-proxy-top, -10000px) !important;
+  left: var(--qq-proxy-left, 0px) !important;
+  top: var(--qq-proxy-top, 0px) !important;
   width: var(--qq-proxy-width, 28px) !important;
   min-width: var(--qq-proxy-width, 28px) !important;
   max-width: var(--qq-proxy-width, 28px) !important;
@@ -853,8 +853,8 @@ html.codex-dream-skin .composer-surface-chrome button.qq-proxied-control.qq-prox
   cursor: pointer !important;
 }
 html.codex-dream-skin .composer-surface-chrome button.qq-proxied-action {
-  left: var(--qq-proxy-left, -10000px) !important;
-  top: var(--qq-proxy-top, -10000px) !important;
+  left: var(--qq-proxy-left, 0px) !important;
+  top: var(--qq-proxy-top, 0px) !important;
   width: var(--qq-proxy-width, 1px) !important;
   min-width: var(--qq-proxy-width, 1px) !important;
   height: var(--qq-proxy-height, 1px) !important;

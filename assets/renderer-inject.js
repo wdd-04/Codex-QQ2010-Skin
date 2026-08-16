@@ -366,9 +366,15 @@
         if (branch.parentElement !== container) return;
         container.insertBefore(meta, branch);
       }
-      meta.className = `qq-message-meta qq-message-meta-${kind}`;
-      meta.querySelector(".qq-message-name").textContent = name;
-      meta.querySelector(".qq-message-time").textContent = messageTime(container);
+      const className = `qq-message-meta qq-message-meta-${kind}`;
+      if (meta.className !== className) meta.className = className;
+      const nameNode = meta.querySelector(".qq-message-name");
+      if (nameNode?.textContent !== name) nameNode.textContent = name;
+      const timeNode = meta.querySelector(".qq-message-time");
+      if (timeNode && !timeNode.dataset.qqTimeInitialized) {
+        timeNode.textContent = messageTime(container);
+        timeNode.dataset.qqTimeInitialized = "true";
+      }
       container.classList.add(kind === "user" ? "qq-user-record" : "qq-assistant-record");
     };
     for (const anchor of document.querySelectorAll("[data-local-conversation-user-anchor]")) {
@@ -438,10 +444,11 @@
       if (!manager?.conversations?.size) return [];
       const currentId = candidateIds.find((value) => manager.conversations.has(value));
       const conversations = [...manager.conversations.values()];
-      const conversation = conversations.find((value) => value?.threadRuntimeStatus?.type === "active") ||
-        manager.conversations.get(currentId) ||
-        conversations.find((value) => value?.resumeState === "resumed" && value?.turnHistory?.kind === "canonical") ||
-        conversations.at(-1);
+      const normalizeTitle = (value) => String(value || "").replace(/\s+/g, " ").trim();
+      const viewedTitle = normalizeTitle(document.querySelector(".qq-task-native-title")?.textContent);
+      const conversation = (viewedTitle && conversations.find((value) => normalizeTitle(value?.title) === viewedTitle)) ||
+        manager.conversations.get(currentId) || null;
+      if (!conversation) return [];
       const entities = conversation?.turnHistory?.history?.entitiesByKey;
       const values = entities instanceof Map ? [...entities.values()] : Object.values(entities || {});
       const turns = new Map();
@@ -1144,7 +1151,7 @@
       document.body.appendChild(chrome);
     }
     const brandName = chrome.querySelector?.(".dream-brand b");
-    if (brandName) brandName.textContent = "从訫乄嗳你";
+    if (brandName && brandName.textContent !== "从訫乄嗳你") brandName.textContent = "从訫乄嗳你";
     const shellBox = shellMain.getBoundingClientRect();
     chrome.style.left = `${Math.round(shellBox.left)}px`;
     chrome.style.top = `${Math.round(shellBox.top)}px`;
