@@ -1,4 +1,5 @@
 ![](界面效果图.png)
+
 ---
 name: codex-qq2010-skin
 description: Apply, launch, update, repair, verify, migrate, or restore the full QQ 2010-style skin for the Windows Codex desktop app. Use when the user asks to install or maintain the Codex QQ2010 interface, reapply it after a Codex update, move it to another PC, or safely return to the official interface without modifying WindowsApps or app.asar.
