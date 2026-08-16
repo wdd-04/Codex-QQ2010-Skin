@@ -1,0 +1,1502 @@
+:root.codex-dream-skin {
+  color-scheme: light !important;
+  --qq-ink: #24394b;
+  --qq-muted: #617d90;
+  --qq-cyan: #19aee6;
+  --qq-blue: #168ed0;
+  --qq-deep: #087fbd;
+  --qq-pale: #e9f8ff;
+  --qq-line: rgba(55, 154, 201, .48);
+  --qq-yellow: #fff2ad;
+  --qq-white: rgba(255, 255, 255, .97);
+}
+
+html.codex-dream-skin body {
+  background:
+    radial-gradient(circle at 84% 4%, rgba(255,255,255,.98), transparent 24%),
+    linear-gradient(180deg, #dff6ff 0%, #beeafa 42%, #9ed8f0 100%) !important;
+  color: var(--qq-ink) !important;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Segoe UI", sans-serif !important;
+}
+
+html.codex-dream-skin body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .42;
+  background:
+    linear-gradient(116deg, transparent 0 56%, rgba(255,255,255,.44) 56.2% 57%, transparent 57.2%),
+    radial-gradient(circle at 72% 18%, rgba(255,255,255,.86) 0 2px, transparent 3px),
+    radial-gradient(circle at 91% 34%, rgba(255,255,255,.72) 0 1px, transparent 2px);
+}
+
+html.codex-dream-skin aside.app-shell-left-panel {
+  background: linear-gradient(180deg, rgba(239,251,255,.98), rgba(204,239,252,.98) 52%, rgba(183,226,246,.98)) !important;
+  border: 1px solid rgba(75,164,207,.68) !important;
+  border-left: 0 !important;
+  border-radius: 0 10px 10px 0 !important;
+  box-shadow: 7px 0 20px rgba(30,111,155,.13), inset -1px 0 rgba(255,255,255,.86), inset 0 1px rgba(255,255,255,.98) !important;
+  backdrop-filter: none !important;
+  color: var(--qq-ink) !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel nav { background: transparent !important; }
+html.codex-dream-skin aside.app-shell-left-panel button {
+  color: #254960 !important;
+  border-radius: 6px !important;
+  transition: background .13s ease, box-shadow .13s ease !important;
+}
+html.codex-dream-skin aside.app-shell-left-panel button:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(184,229,249,.88)) !important;
+  box-shadow: inset 0 0 0 1px rgba(69,158,201,.34), 0 1px 3px rgba(29,103,142,.10) !important;
+}
+html.codex-dream-skin aside.app-shell-left-panel button[aria-label^="切换模式"] {
+  background: transparent !important;
+  border-color: transparent !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #087ebd !important;
+  text-shadow: 0 1px white;
+}
+html.codex-dream-skin aside.app-shell-left-panel button[aria-label^="切换模式"]::after {
+  content: " · 在线";
+  margin-left: 4px;
+  color: #54a527;
+  font-size: 10px;
+  font-weight: 600;
+}
+html.codex-dream-skin aside.app-shell-left-panel [class~="bg-token-list-hover-background"],
+html.codex-dream-skin aside.app-shell-left-panel [aria-current="page"] {
+  background: linear-gradient(180deg, #fff8c8, #ffe98a) !important;
+  border: 1px solid rgba(218,170,45,.48) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.88), 0 2px 6px rgba(97,126,139,.12) !important;
+}
+
+html.codex-dream-skin main.main-surface {
+  background: linear-gradient(180deg, rgba(244,252,255,.98), rgba(255,255,255,.98) 82px, rgba(248,252,254,.99)) !important;
+  border: 1px solid rgba(69,157,202,.56) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 10px 0 0 0 !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.98), -6px 0 22px rgba(29,112,153,.10) !important;
+  overflow: hidden !important;
+}
+html.codex-dream-skin main.main-surface > header.app-header-tint {
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(213,243,254,.95) 47%, rgba(163,219,244,.95) 49%, rgba(205,239,252,.96)) !important;
+  border-bottom: 1px solid rgba(49,148,197,.56) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.98), 0 1px rgba(255,255,255,.76) !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin header.app-header-tint {
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(213,243,254,.95) 47%, rgba(163,219,244,.95) 49%, rgba(205,239,252,.96)) !important;
+  border-bottom: 1px solid rgba(49,148,197,.56) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.98), 0 1px rgba(255,255,255,.76) !important;
+}
+
+#codex-dream-skin-chrome {
+  position: fixed;
+  z-index: 31;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 10px 0 0 0;
+}
+.dream-brand {
+  position: absolute;
+  left: 18px;
+  top: 3px;
+  height: 40px;
+  display: none;
+  align-items: center;
+  gap: 9px;
+  color: #126d9d;
+  text-shadow: 0 1px rgba(255,255,255,.92);
+}
+#codex-dream-skin-chrome.dream-home-shell .dream-brand { display: flex; }
+.dream-brand .dream-note {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 13px;
+  background: linear-gradient(180deg, #37c8f2, #078bc8);
+  border: 1px solid #087eb7;
+  box-shadow: inset 0 1px rgba(255,255,255,.82), 0 2px 4px rgba(13,93,132,.22);
+}
+.dream-brand b { display: block; font-size: 14px; letter-spacing: .02em; }
+.dream-brand small { display: block; margin-top: -1px; color: #63899e; font-size: 9px; }
+.dream-signature {
+  position: absolute;
+  right: 86px;
+  top: 9px;
+  display: none;
+  padding: 3px 9px;
+  border: 1px solid rgba(65,159,201,.36);
+  border-radius: 999px;
+  color: #3d7896;
+  background: rgba(255,255,255,.52);
+  font-size: 10px;
+  text-shadow: 0 1px white;
+}
+#codex-dream-skin-chrome.dream-home-shell .dream-signature { display: block; }
+.dream-sparkles { position: absolute; inset: 46px 0 0; opacity: .58; }
+.dream-sparkles i {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(255,255,255,.92);
+  border-radius: 50%;
+  background: rgba(117,210,242,.36);
+  box-shadow: 0 0 8px rgba(255,255,255,.78);
+}
+.dream-sparkles i:nth-child(1) { left: 10%; top: 11%; }
+.dream-sparkles i:nth-child(2) { left: 31%; top: 5%; width: 4px; height: 4px; }
+.dream-sparkles i:nth-child(3) { left: 58%; top: 18%; }
+.dream-sparkles i:nth-child(4) { left: 78%; top: 9%; width: 5px; height: 5px; }
+.dream-sparkles i:nth-child(5) { left: 91%; top: 28%; }
+.dream-sparkles i:nth-child(6) { left: 66%; top: 66%; width: 4px; height: 4px; }
+.dream-polaroid {
+  position: absolute;
+  right: 16px;
+  bottom: 78px;
+  width: 118px;
+  height: 78px;
+  display: none;
+  border: 1px solid rgba(54,147,193,.46);
+  border-radius: 7px;
+  background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(207,239,251,.92));
+  box-shadow: inset 0 1px white, 0 5px 15px rgba(31,106,143,.14);
+}
+#codex-dream-skin-chrome.dream-home-shell .dream-polaroid { display: block; }
+.dream-polaroid::before {
+  content: "●  Codex 助手\A状态：在线\A消息：随时可以开始";
+  white-space: pre;
+  position: absolute;
+  inset: 12px 10px;
+  color: #47768e;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.dream-polaroid::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #63b82f;
+  box-shadow: 0 0 0 2px rgba(99,184,47,.16);
+}
+.dream-ribbon {
+  position: absolute;
+  left: 50%;
+  bottom: 73px;
+  display: none;
+  align-items: center;
+  gap: 7px;
+  color: #178ec5;
+  font-size: 15px;
+  transform: translateX(-50%);
+}
+#codex-dream-skin-chrome.dream-home-shell .dream-ribbon { display: flex; }
+.dream-ribbon span { color: #78bad8; font-size: 11px; }
+
+html.codex-dream-skin [role="main"] {
+  background: transparent !important;
+  scrollbar-color: rgba(68,158,200,.48) transparent;
+}
+/* New conversations use the same blank chat layout as established tasks. */
+html.codex-dream-skin .qq-new-conversation {
+  --thread-content-max-width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+html.codex-dream-skin .qq-new-conversation > div:has([data-testid="home-icon"]) {
+  min-height: 100% !important;
+  height: 100% !important;
+  padding-top: 0 !important;
+}
+html.codex-dream-skin .qq-new-conversation > div:has([data-testid="home-icon"]) > div:first-child {
+  display: none !important;
+}
+html.codex-dream-skin .qq-new-conversation > div:has([data-testid="home-icon"]) > div:nth-child(2) {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  justify-content: flex-end !important;
+}
+html.codex-dream-skin .qq-new-conversation > div:has([data-testid="home-icon"]) > div:nth-child(2) > div:first-child {
+  padding-top: 0 !important;
+  padding-bottom: 16px !important;
+}
+/* Keep the native project selector behind the QQ composer. Paint only the
+   middle of the home body white, leaving the top and bottom transparent so
+   the QQ gradient bands and their separator lines remain visible. */
+html.codex-dream-skin .qq-new-conversation [class*="_ComposerLayoutRoot_"].composer-surface-chrome > [class*="_ComposerLayoutBody_"] {
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 38px,
+    #fff 38px,
+    #fff calc(100% - 39px),
+    transparent calc(100% - 39px),
+    transparent 100%
+  ) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+html.codex-dream-skin .dream-home {
+  --thread-content-max-width: min(950px, calc(100cqw - 44px)) !important;
+  overflow-x: hidden !important;
+}
+.dream-home > div:first-child { padding-top: 15px !important; min-height: 100% !important; }
+.dream-home > div:first-child > div:first-child {
+  flex: 0 0 418px !important;
+  min-height: 418px !important;
+  align-items: flex-start !important;
+  padding-bottom: 0 !important;
+}
+.dream-home > div:first-child > div:first-child > div:first-child {
+  position: relative !important;
+  isolation: isolate;
+  width: calc(100% - 44px) !important;
+  max-width: none !important;
+  height: 242px !important;
+  min-height: 242px !important;
+  flex: 0 1 auto !important;
+  padding: 0 !important;
+  border: 1px solid rgba(62,154,199,.70) !important;
+  border-radius: 9px !important;
+  overflow: visible !important;
+  background:
+    radial-gradient(circle at 82% 25%, rgba(255,255,255,.94) 0 3px, transparent 4px),
+    radial-gradient(circle at 88% 39%, rgba(255,255,255,.72) 0 7px, transparent 8px),
+    linear-gradient(135deg, rgba(255,255,255,.44) 0 18%, transparent 18.4% 67%, rgba(255,255,255,.24) 67.4%),
+    linear-gradient(180deg, #89dcf6 0%, #32b7e6 45%, #0f91cf 46%, #75d2f0 100%) !important;
+  box-shadow: 0 8px 22px rgba(27,111,153,.16), inset 0 1px rgba(255,255,255,.90) !important;
+}
+.dream-home > div:first-child > div:first-child > div:first-child::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0 auto 0 0;
+  width: 58%;
+  border-radius: 8px 0 0 8px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(7,119,178,.94), rgba(14,147,205,.88) 58%, rgba(80,191,229,.40) 82%, transparent);
+}
+.dream-home > div:first-child > div:first-child > div:first-child > div:first-child {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding-left: 34px;
+}
+.dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child {
+  width: 55% !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+}
+.dream-home [data-testid="home-icon"] { display: none !important; }
+.dream-home [data-feature="game-source"] {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  max-width: 100% !important;
+  color: white !important;
+  font-size: clamp(20px, 2vw, 28px) !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+  text-shadow: 0 2px 8px rgba(0,70,114,.42), 0 1px rgba(255,255,255,.22);
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.dream-home [data-feature="game-source"]::after {
+  content: "正在连接灵感… 今天也要轻松编码";
+  display: block;
+  margin-top: 12px;
+  color: rgba(245,253,255,.94);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.dream-home [data-feature="game-source"] button {
+  margin: 0 5px;
+  padding: 2px 9px 3px;
+  border: 1px solid rgba(220,246,255,.82);
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgba(255,255,255,.30), rgba(175,226,246,.18));
+  color: #f2fbff !important;
+  text-underline-offset: 4px;
+  box-shadow: inset 0 1px rgba(255,255,255,.30);
+}
+.dream-home [data-feature="game-source"] button::before {
+  content: "选择项目 · ";
+  font-size: .48em;
+  font-weight: 600;
+  vertical-align: middle;
+  opacity: .90;
+}
+
+/* QQ 2010 friend-group arrows for the native 项目 / 最近 section toggles. */
+html.codex-dream-skin aside.app-shell-left-panel button[data-app-action-sidebar-section-toggle] {
+  position: relative !important;
+  padding-left: 14px !important;
+}
+html.codex-dream-skin aside.app-shell-left-panel button[data-app-action-sidebar-section-toggle]::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid #52717d;
+  filter: drop-shadow(0 1px rgba(255,255,255,.9));
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+html.codex-dream-skin aside.app-shell-left-panel button[data-app-action-sidebar-section-toggle][aria-expanded="true"]::before {
+  left: 1px;
+  border-top: 6px solid #52717d;
+  border-right: 4px solid transparent;
+  border-bottom: 0;
+  border-left: 4px solid transparent;
+}
+html.codex-dream-skin aside.app-shell-left-panel button[data-app-action-sidebar-section-toggle] > svg {
+  display: none !important;
+}
+.dream-home > div:first-child > div:first-child > div:first-child > div:nth-child(2) {
+  left: 14px !important;
+  right: 14px !important;
+  top: 100% !important;
+  margin-top: 12px !important;
+}
+.dream-home .group\/home-suggestions { overflow: visible !important; }
+.dream-home .group\/home-suggestions button {
+  position: relative !important;
+  min-height: 122px !important;
+  padding: 14px 13px 12px !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  text-align: center !important;
+  border: 1px solid rgba(87,168,205,.66) !important;
+  border-radius: 8px !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(225,246,254,.96)) !important;
+  color: #294c60 !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  box-shadow: inset 0 1px white, 0 4px 10px rgba(30,111,149,.10) !important;
+  transition: background .14s ease, box-shadow .14s ease !important;
+}
+.dream-home .group\/home-suggestions button:hover {
+  background: linear-gradient(180deg, #fffdf1, #fff0ae) !important;
+  box-shadow: inset 0 1px white, 0 6px 14px rgba(79,119,133,.15) !important;
+}
+.dream-home .group\/home-suggestions button > span:first-child > span:first-child {
+  width: 35px;
+  height: 35px;
+  display: grid !important;
+  place-items: center;
+  margin: 0 auto;
+  border-radius: 7px;
+  color: white !important;
+  background: linear-gradient(180deg, #53c9ef, #078cc9);
+  border: 1px solid #1586b8;
+  box-shadow: inset 0 1px rgba(255,255,255,.70), 0 3px 8px rgba(20,111,151,.18);
+}
+.dream-home .group\/home-suggestions button svg { width: 19px !important; height: 19px !important; color: white !important; }
+.dream-home .group\/home-suggestions button > span:first-child { justify-content: center !important; }
+.dream-home .group\/home-suggestions button > span:last-child { align-items: center !important; text-align: center !important; }
+
+html.codex-dream-skin .composer-surface-chrome {
+  border: 1px solid rgba(58,151,197,.64) !important;
+  border-radius: 9px !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.99), rgba(229,247,254,.98)) !important;
+  box-shadow: inset 0 1px white, 0 6px 18px rgba(26,104,143,.13) !important;
+  backdrop-filter: none !important;
+  overflow: visible !important;
+}
+html.codex-dream-skin .composer-surface-chrome::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 5px;
+  z-index: 0;
+  border-radius: 9px 9px 0 0;
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(111,202,237,.52));
+  pointer-events: none;
+}
+.dream-home div:has(> .horizontal-scroll-fade-mask .group\/project-selector) {
+  position: relative;
+  padding-top: 27px !important;
+  border: 1px solid rgba(69,158,201,.44);
+  border-bottom: 0;
+  background: linear-gradient(180deg, rgba(237,249,254,.98), rgba(204,237,250,.94)) !important;
+}
+.dream-home div:has(> .horizontal-scroll-fade-mask .group\/project-selector)::before {
+  content: "●  我的项目";
+  position: absolute;
+  left: 13px;
+  top: 6px;
+  z-index: 2;
+  color: #277295;
+  font-size: 12px;
+  font-weight: 700;
+  text-shadow: 0 1px white;
+  white-space: nowrap;
+}
+.dream-home .group\/project-selector > button {
+  border-color: rgba(57,148,191,.42) !important;
+  border-radius: 6px !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(205,239,251,.92)) !important;
+  color: #276783 !important;
+  box-shadow: inset 0 1px white, 0 2px 6px rgba(28,101,137,.09) !important;
+}
+
+html.codex-dream-skin .ProseMirror { color: #28485b !important; caret-color: #078fc9 !important; }
+html.codex-dream-skin button[class~="bg-token-foreground"] {
+  background: linear-gradient(180deg, #49c5ed, #078bc8) !important;
+  border: 1px solid #087fb7 !important;
+  color: white !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.52), 0 3px 8px rgba(14,102,145,.20) !important;
+}
+
+/* QQv2: compact 2010-era beveled toolbar controls. */
+html.codex-dream-skin .composer-surface-chrome button {
+  position: relative !important;
+  min-width: 27px !important;
+  height: 27px !important;
+  border: 1px solid rgba(46,139,183,.62) !important;
+  border-radius: 4px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #e9f8fe 46%, #bfe8f8 49%, #e2f5fc 100%) !important;
+  color: #28647f !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.98), 0 1px 2px rgba(29,102,138,.14) !important;
+  text-shadow: 0 1px white !important;
+}
+html.codex-dream-skin .composer-surface-chrome button:hover {
+  border-color: #daaa37 !important;
+  background: linear-gradient(180deg, #fffef5 0%, #fff7d2 46%, #ffe88f 49%, #fff4c4 100%) !important;
+  color: #64511e !important;
+}
+html.codex-dream-skin .composer-surface-chrome button:active {
+  background: linear-gradient(180deg, #aedff2, #e6f7fd) !important;
+  box-shadow: inset 0 2px 4px rgba(24,103,140,.20) !important;
+}
+html.codex-dream-skin .composer-surface-chrome button svg {
+  color: #1687bb !important;
+  filter: drop-shadow(0 1px rgba(255,255,255,.95));
+}
+
+html.codex-dream-skin .composer-surface-chrome button[aria-label^="添加文件"] svg {
+  opacity: 0 !important;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label^="添加文件"]::before {
+  content: "✚";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #1687bb;
+  font: 700 15px/1 "Segoe UI Symbol", sans-serif;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="听写"] svg { opacity: 1 !important; }
+html.codex-dream-skin .composer-surface-chrome button[aria-label="更改权限"] {
+  border-color: rgba(213,144,38,.58) !important;
+  background: linear-gradient(180deg, #fffef7, #fff0bb) !important;
+  color: #b75a20 !important;
+}
+html.codex-dream-skin .composer-surface-chrome button:has([class*="_ComposerDropdownLabel_"]) {
+  min-width: 112px !important;
+  justify-content: flex-start !important;
+  padding-inline: 9px 22px !important;
+  border-color: rgba(51,139,181,.68) !important;
+  background: linear-gradient(180deg, #ffffff, #d9f1fa) !important;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"],
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送消息"],
+html.codex-dream-skin .composer-surface-chrome button[aria-label="停止"],
+html.codex-dream-skin .composer-surface-chrome button[aria-label="暂停"],
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续"],
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续运行"] {
+  position: relative !important;
+  width: 86px !important;
+  min-width: 86px !important;
+  height: 27px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid #7f9eae !important;
+  border-radius: 3px !important;
+  background: linear-gradient(180deg, #fbfdfe 0%, #eef5f8 49%, #d8e9f0 51%, #f2f8fa 100%) !important;
+  color: #273f4d !important;
+  box-shadow: inset 0 1px #fff, 0 1px 2px rgba(45,91,113,.20) !important;
+  text-shadow: 0 1px white !important;
+  transform: translateY(16px) !important;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"] svg,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送消息"] svg,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="停止"] svg,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="暂停"] svg,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续"] svg,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续运行"] svg {
+  display: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"] > *,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送消息"] > *,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="停止"] > *,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="暂停"] > *,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续"] > *,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续运行"] > * {
+  display: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"]::before,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送消息"]::before {
+  content: "发送(S)";
+  position: absolute;
+  inset: 0 21px 0 0;
+  display: grid;
+  place-items: center;
+  color: #273f4d;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"]::after,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送消息"]::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-left: 1px solid #9ab1bd;
+  color: #344f5d;
+  font-size: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,.60), rgba(198,224,235,.55));
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="停止"]::after,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="暂停"]::after,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续"]::after,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续运行"]::after {
+  content: attr(aria-label);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #273f4d;
+  font-size: 12px;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"]:hover,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送消息"]:hover,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="停止"]:hover,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="暂停"]:hover,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续"]:hover,
+html.codex-dream-skin .composer-surface-chrome button[aria-label="继续运行"]:hover {
+  border-color: #5e8da5 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #edf8fc 48%, #c5e4ef 51%, #edf8fb 100%) !important;
+}
+
+/* QQv2 composer: five square tools at upper-left, history at upper-right,
+   editor in the middle, and only the native send/stop action at lower-right. */
+html.codex-dream-skin [class*="_ComposerLayoutRoot_"].composer-surface-chrome {
+  position: relative !important;
+  height: 176px !important;
+  min-height: 176px !important;
+  max-height: 176px !important;
+  border: 1px solid #83c6df !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+html.codex-dream-skin [class*="_ComposerLayoutRoot_"].composer-surface-chrome > [class*="_ComposerLayoutBody_"] {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+html.codex-dream-skin [class*="_ComposerLayoutRoot_"].composer-surface-chrome::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 38px;
+  border: 0;
+  border-bottom: 1px solid #8fcfe5;
+  border-radius: 0;
+  background: linear-gradient(180deg, #d9f4fc 0%, #bce8f7 47%, #d6f2fb 100%);
+  box-shadow: inset 0 1px rgba(255,255,255,.92);
+  pointer-events: none;
+}
+html.codex-dream-skin [class*="_ComposerLayoutRoot_"].composer-surface-chrome::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 39px;
+  border-top: 1px solid #b9dce9;
+  background: linear-gradient(0deg, #9fdaf0 0%, #c9ecf8 58%, #eefaff 100%);
+  box-shadow: inset 0 1px rgba(255,255,255,.90);
+  pointer-events: none;
+}
+html.codex-dream-skin [class*="_ComposerLayoutRoot_"].composer-surface-chrome > * {
+  position: relative;
+  z-index: 1;
+}
+html.codex-dream-skin .sticky.bottom-0:has(.composer-surface-chrome) > .pointer-events-none.absolute.inset-x-0.bottom-0 {
+  background: transparent !important;
+}
+html.codex-dream-skin [class*="_ComposerLayoutAttachments_"]:empty {
+  min-height: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+}
+html.codex-dream-skin .composer-surface-chrome [data-composer-attachments][data-visible-attachments] {
+  position: absolute !important;
+  z-index: 7 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: calc(100% + 8px) !important;
+  width: 100% !important;
+  min-height: 82px !important;
+  height: auto !important;
+  padding: 0 8px !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  pointer-events: auto !important;
+}
+html.codex-dream-skin [class*="_ComposerLayoutFooter_"] {
+  position: relative !important;
+  z-index: 1;
+  min-height: 168px !important;
+  padding: 39px 9px 8px !important;
+  background: transparent !important;
+}
+html.codex-dream-skin [class*="_ComposerLayoutFooter_"] > div:nth-child(2) {
+  margin: 0 !important;
+  border: 0 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome [class*="_ComposerLayoutFooter_"] > [class*="row-start-1"] {
+  position: absolute !important;
+  z-index: 2 !important;
+  left: 9px !important;
+  right: 9px !important;
+  top: 0 !important;
+  bottom: 31px !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  transform: none !important;
+  overflow: hidden !important;
+}
+html.codex-dream-skin .composer-surface-chrome [class*="_ComposerLayoutFooter_"] > [class*="row-start-1"] > * {
+  height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding-inline: 0 !important;
+}
+html.codex-dream-skin [class*="_RichTextInput_"] .ProseMirror {
+  min-height: 100% !important;
+  height: 100% !important;
+  padding-top: 8px !important;
+  padding-inline: 0 !important;
+}
+html.codex-dream-skin .composer-surface-chrome .ProseMirror[data-codex-composer="true"]::before,
+html.codex-dream-skin .composer-surface-chrome .ProseMirror[data-codex-composer="true"]::after,
+html.codex-dream-skin .composer-surface-chrome .ProseMirror[data-codex-composer="true"] > .is-editor-empty::before,
+html.codex-dream-skin .composer-surface-chrome .ProseMirror[data-codex-composer="true"] > [data-placeholder]::before,
+html.codex-dream-skin .composer-surface-chrome .ProseMirror[data-codex-composer="true"] > p.placeholder::before,
+html.codex-dream-skin .composer-surface-chrome .ProseMirror[data-codex-composer="true"] > p.placeholder::after {
+  content: "" !important;
+  display: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome .qq-dictation-native-add {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label^="添加文件"] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="停止听写"]) .qq-send-group,
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="结束听写"]) .qq-send-group,
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="取消听写"]) .qq-send-group {
+  display: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="停止听写"]) button[aria-label^="添加文件"],
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="结束听写"]) button[aria-label^="添加文件"],
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="取消听写"]) button[aria-label^="添加文件"] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="停止听写"]) [class*="_ComposerLayoutBody_"] > .contents > :has(> [class*="_RichTextInput_"]),
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="结束听写"]) [class*="_ComposerLayoutBody_"] > .contents > :has(> [class*="_RichTextInput_"]),
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="取消听写"]) [class*="_ComposerLayoutBody_"] > .contents > :has(> [class*="_RichTextInput_"]) {
+  position: absolute !important;
+  z-index: 2 !important;
+  left: 9px !important;
+  right: 9px !important;
+  top: 39px !important;
+  bottom: 39px !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
+}
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="停止听写"]) [class*="_ComposerLayoutBody_"] > .contents > :has(> [class*="_RichTextInput_"]) > [class*="_RichTextInput_"],
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="结束听写"]) [class*="_ComposerLayoutBody_"] > .contents > :has(> [class*="_RichTextInput_"]) > [class*="_RichTextInput_"],
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="取消听写"]) [class*="_ComposerLayoutBody_"] > .contents > :has(> [class*="_RichTextInput_"]) > [class*="_RichTextInput_"] {
+  height: 100% !important;
+  max-height: 100% !important;
+}
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="停止听写"]) [class*="_ComposerFooter_"],
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="结束听写"]) [class*="_ComposerFooter_"],
+html.codex-dream-skin .composer-surface-chrome:has(button[aria-label*="取消听写"]) [class*="_ComposerFooter_"] {
+  position: absolute !important;
+  z-index: 6 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  bottom: 8px !important;
+  width: auto !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+  transform: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome [class*="_ComposerLayoutBody_"] > .contents > :has(> [class*="_RichTextInput_"]) {
+  position: absolute !important;
+  z-index: 2 !important;
+  left: 9px !important;
+  right: 9px !important;
+  top: 39px !important;
+  bottom: 39px !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
+}
+html.codex-dream-skin .composer-surface-chrome [class*="_ComposerLayoutBody_"] > .contents > :has(> [class*="_RichTextInput_"]) > [class*="_RichTextInput_"] {
+  height: 100% !important;
+  max-height: 100% !important;
+}
+html.codex-dream-skin .composer-surface-chrome [class*="_ComposerLayoutBody_"] > .contents > [class*="_ComposerFooter_"] {
+  position: absolute !important;
+  z-index: 6 !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  bottom: 8px !important;
+  width: auto !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+  transform: none !important;
+}
+html.codex-dream-skin .qq-proxied-control {
+  position: fixed !important;
+  z-index: 5 !important;
+  left: var(--qq-proxy-left, -10000px) !important;
+  top: var(--qq-proxy-top, -10000px) !important;
+  width: var(--qq-proxy-width, 28px) !important;
+  min-width: var(--qq-proxy-width, 28px) !important;
+  height: var(--qq-proxy-height, 28px) !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome button.qq-proxied-control.qq-proxy-interactive {
+  position: fixed !important;
+  z-index: 9 !important;
+  left: var(--qq-proxy-left, -10000px) !important;
+  top: var(--qq-proxy-top, -10000px) !important;
+  width: var(--qq-proxy-width, 28px) !important;
+  min-width: var(--qq-proxy-width, 28px) !important;
+  max-width: var(--qq-proxy-width, 28px) !important;
+  height: var(--qq-proxy-height, 28px) !important;
+  min-height: var(--qq-proxy-height, 28px) !important;
+  max-height: var(--qq-proxy-height, 28px) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  box-sizing: border-box !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  opacity: 0 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+html.codex-dream-skin .composer-surface-chrome button.qq-proxied-action {
+  left: var(--qq-proxy-left, -10000px) !important;
+  top: var(--qq-proxy-top, -10000px) !important;
+  width: var(--qq-proxy-width, 1px) !important;
+  min-width: var(--qq-proxy-width, 1px) !important;
+  height: var(--qq-proxy-height, 1px) !important;
+  transform: none !important;
+}
+html.codex-dream-skin .qq-composer-toolbar {
+  position: absolute !important;
+  z-index: 6;
+  left: 10px;
+  top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+html.codex-dream-skin .qq-composer-toolbar .qq-tool {
+  width: 28px !important;
+  min-width: 28px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  border: 1px solid transparent !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+html.codex-dream-skin .qq-hidden-native-toolbar-tooltip {
+  display: none !important;
+}
+html.codex-dream-skin:has(.qq-composer-toolbar .qq-tool-access:hover) [role="tooltip"],
+html.codex-dream-skin:has(.qq-composer-toolbar .qq-tool-access:focus) [role="tooltip"],
+html.codex-dream-skin:has(.qq-composer-toolbar .qq-tool-access:focus-visible) [role="tooltip"],
+html.codex-dream-skin:has(.qq-composer-toolbar .qq-tool-model:hover) [role="tooltip"],
+html.codex-dream-skin:has(.qq-composer-toolbar .qq-tool-model:focus) [role="tooltip"],
+html.codex-dream-skin:has(.qq-composer-toolbar .qq-tool-model:focus-visible) [role="tooltip"] {
+  display: none !important;
+}
+html.codex-dream-skin .qq-composer-toolbar button.qq-native-tool {
+  position: relative !important;
+  inset: auto !important;
+  width: 28px !important;
+  min-width: 28px !important;
+  max-width: 28px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 28px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid transparent !important;
+  border-radius: 3px !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+html.codex-dream-skin .qq-composer-toolbar button.qq-native-tool:hover:not(:disabled) {
+  border-color: rgba(56,150,189,.32) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(173,226,244,.60)) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.90) !important;
+}
+html.codex-dream-skin .qq-composer-toolbar button.qq-native-tool > * {
+  display: none !important;
+}
+html.codex-dream-skin .qq-composer-toolbar .qq-tool:hover {
+  border-color: rgba(56,150,189,.32) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(173,226,244,.60)) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.90) !important;
+}
+html.codex-dream-skin .qq-composer-toolbar .qq-tool:active {
+  background: rgba(126,205,233,.52) !important;
+  box-shadow: inset 0 1px 3px rgba(28,117,156,.24) !important;
+}
+html.codex-dream-skin .qq-tool::before,
+html.codex-dream-skin .qq-history-icon {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  background: var(--qq-tool-icon) center / contain no-repeat;
+  filter: drop-shadow(0 1px 0 rgba(255,255,255,.96)) drop-shadow(0 1px 1px rgba(40,105,128,.28));
+}
+html.codex-dream-skin .qq-tool-file { --qq-tool-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='a' x2='0' y2='1'%3E%3Cstop stop-color='%2379d7f3'/%3E%3Cstop offset='1' stop-color='%232d9fd2'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x2='0' y2='1'%3E%3Cstop stop-color='%23ffe98b'/%3E%3Cstop offset='1' stop-color='%23efa928'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M2.5 6.5h7l2 2H22v11H2.5z' fill='url(%23a)' stroke='%231b78a8'/%3E%3Cpath d='M3 8h18l-2 10.5H2z' fill='url(%23b)' stroke='%23c98718'/%3E%3Cpath d='M5 10h13' stroke='%23fff4b8'/%3E%3C/svg%3E"); }
+html.codex-dream-skin .qq-tool-image { --qq-tool-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='a' x2='0' y2='1'%3E%3Cstop stop-color='%23fdfefe'/%3E%3Cstop offset='1' stop-color='%23b9dfec'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2.5' y='3.5' width='19' height='16' rx='1.5' fill='url(%23a)' stroke='%232b83aa'/%3E%3Ccircle cx='16.5' cy='8' r='2.2' fill='%23f5c13e'/%3E%3Cpath d='M4.5 17l5-6 3.3 3.5 2.2-2.2 4.5 4.7z' fill='%2357b45a' stroke='%232d8f50' stroke-width='.7'/%3E%3Cpath d='M5 17h14' stroke='%23ffffff' opacity='.65'/%3E%3C/svg%3E"); }
+html.codex-dream-skin .qq-tool-voice { --qq-tool-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='a' x2='0' y2='1'%3E%3Cstop stop-color='%237ee5fa'/%3E%3Cstop offset='.52' stop-color='%2328acd8'/%3E%3Cstop offset='1' stop-color='%230f75ae'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='8.2' y='2.5' width='7.6' height='12.2' rx='3.8' fill='url(%23a)' stroke='%230c699b'/%3E%3Cpath d='M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M8.5 21h7' fill='none' stroke='%23177fae' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M10.2 5h3.6M10.2 7.5h3.6' stroke='%23d8f9ff' stroke-linecap='round'/%3E%3C/svg%3E"); }
+html.codex-dream-skin .qq-tool-access { --qq-tool-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='a' x2='0' y2='1'%3E%3Cstop stop-color='%23ffe67b'/%3E%3Cstop offset='1' stop-color='%23ef9f16'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12 2l8 3.2v5.7c0 5-3.2 8.7-8 10.8-4.8-2.1-8-5.8-8-10.8V5.2z' fill='url(%23a)' stroke='%23b9720d'/%3E%3Cpath d='M9 10V8.4a3 3 0 0 1 6 0V10m-7 0h8v6H8z' fill='%23f8fbff' stroke='%234b8baa'/%3E%3Ccircle cx='12' cy='13' r='1' fill='%232b7195'/%3E%3C/svg%3E"); }
+html.codex-dream-skin .qq-tool-model { --qq-tool-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='a' x2='0' y2='1'%3E%3Cstop stop-color='%237fd9f4'/%3E%3Cstop offset='1' stop-color='%232f83bf'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='3' y='5' width='18' height='15' rx='2' fill='url(%23a)' stroke='%23196799'/%3E%3Cpath d='M9 5V3h6v2M7 10h10v6H7z' fill='%23eefcff' stroke='%231b789f'/%3E%3Ccircle cx='10' cy='13' r='1' fill='%2338a852'/%3E%3Ccircle cx='14' cy='13' r='1' fill='%23f1a51e'/%3E%3Cpath d='M1.5 10v5M22.5 10v5' stroke='%23196799' stroke-width='2'/%3E%3C/svg%3E"); }
+html.codex-dream-skin .qq-model-list-submenu > [role="menu"],
+html.codex-dream-skin .qq-model-list-submenu > [role="listbox"] {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+html.codex-dream-skin .qq-composer-toolbar .qq-tool::before {
+  width: 25px;
+  height: 25px;
+  background-image: var(--qq-icons-art) !important;
+  background-size: 150px 25px !important;
+  background-repeat: no-repeat !important;
+  filter: none !important;
+}
+html.codex-dream-skin .qq-tool-file::before { background-position: 0 0 !important; }
+html.codex-dream-skin .qq-tool-image::before { background-position: -25px 0 !important; }
+html.codex-dream-skin .qq-tool-voice::before { background-position: -50px 0 !important; }
+html.codex-dream-skin .qq-tool-access::before { background-position: -75px 0 !important; }
+html.codex-dream-skin .qq-tool-model::before { background-position: -100px 0 !important; }
+html.codex-dream-skin .composer-surface-chrome button.qq-message-history {
+  position: absolute !important;
+  z-index: 6;
+  right: 8px;
+  top: 5px;
+  width: auto !important;
+  min-width: 96px !important;
+  height: 27px !important;
+  padding: 0 6px !important;
+  display: flex !important;
+  align-items: center;
+  gap: 4px;
+  color: #28647f !important;
+  font-size: 12px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-shadow: 0 1px white !important;
+}
+html.codex-dream-skin .composer-surface-chrome button.qq-message-history::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: #7898a8;
+  box-shadow: 1px 0 rgba(255,255,255,.78);
+  pointer-events: none;
+}
+html.codex-dream-skin .composer-surface-chrome button.qq-message-history:hover {
+  border-color: rgba(56,150,189,.28) !important;
+  background: rgba(255,255,255,.48) !important;
+}
+html.codex-dream-skin .composer-surface-chrome button.qq-message-history .qq-history-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  --qq-tool-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cdefs%3E%3ClinearGradient id='a' x2='0' y2='1'%3E%3Cstop stop-color='%23fff47c'/%3E%3Cstop offset='1' stop-color='%23efae24'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2.5' y='3' width='15' height='14' rx='1' fill='url(%23a)' stroke='%23b77b13'/%3E%3Crect x='5' y='5' width='10' height='2' fill='%23ffffff' opacity='.95'/%3E%3Cpath d='M5 9h10M5 12h8M5 15h6' stroke='%23678ca0' stroke-width='1'/%3E%3Cpath d='M3 3h5v2H3z' fill='%23f28a22'/%3E%3C/svg%3E");
+  background-image: var(--qq-icons-art) !important;
+  background-size: 150px 25px !important;
+  background-position: -125px 0 !important;
+  background-repeat: no-repeat !important;
+  filter: none !important;
+}
+html.codex-dream-skin .composer-surface-chrome button.qq-message-history .qq-history-label {
+  display: inline-flex;
+  align-items: center;
+  height: 25px;
+  line-height: 25px;
+  padding: 0;
+}
+html.codex-dream-skin .qq-history-caret {
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 5px solid #416b7f;
+}
+
+html.codex-dream-skin .qq-send-group {
+  position: absolute !important;
+  z-index: 8 !important;
+  right: 9px;
+  bottom: 6px;
+  width: 86px;
+  height: 27px;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #7f9eae;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #fbfdfe 0%, #eef5f8 49%, #d8e9f0 51%, #f2f8fa 100%);
+  box-shadow: inset 0 1px #fff, 0 1px 2px rgba(45,91,113,.20);
+}
+html.codex-dream-skin .qq-send-group[hidden] { display: none !important; }
+html.codex-dream-skin .composer-surface-chrome .qq-send-group > button {
+  position: relative !important;
+  height: 25px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #273f4d !important;
+  font-size: 12px;
+  text-shadow: 0 1px white !important;
+}
+html.codex-dream-skin .composer-surface-chrome .qq-send-group > button:hover:not(:disabled) {
+  background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(194,226,238,.72)) !important;
+}
+html.codex-dream-skin .composer-surface-chrome .qq-send-main {
+  width: 65px !important;
+  min-width: 65px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 25px !important;
+  transform: none !important;
+  flex: 1 1 auto !important;
+}
+html.codex-dream-skin .composer-surface-chrome .qq-send-group > button.qq-send-caret {
+  width: 20px !important;
+  min-width: 20px !important;
+  flex: 0 0 20px !important;
+  border-left: 0 !important;
+  box-shadow: none !important;
+  font-size: 0 !important;
+}
+html.codex-dream-skin .composer-surface-chrome .qq-send-group > button.qq-send-caret::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: #7898a8;
+  box-shadow: 1px 0 rgba(255,255,255,.78);
+  pointer-events: none;
+}
+html.codex-dream-skin .composer-surface-chrome .qq-send-group > button.qq-send-caret::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -3px;
+  margin-top: -2px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 5px solid #416b7f;
+  pointer-events: none;
+}
+html.codex-dream-skin .composer-surface-chrome .qq-send-group > button:disabled {
+  opacity: .62 !important;
+  cursor: default !important;
+}
+html.codex-dream-skin .qq-send-menu-popover {
+  position: fixed !important;
+  z-index: 1001 !important;
+  min-width: 126px;
+  padding: 3px;
+  border: 1px solid #62a9c7;
+  border-radius: 3px;
+  background: #f5fcff;
+  box-shadow: inset 0 1px white, 0 6px 18px rgba(24,83,111,.24);
+}
+html.codex-dream-skin .qq-send-voice-item {
+  width: 100%;
+  height: 29px;
+  padding: 0 9px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  color: #30566a;
+  font-size: 12px;
+}
+html.codex-dream-skin .qq-send-voice-item:hover:not(:disabled) { border-color: #aad2e2; background: #e5f6fc; }
+html.codex-dream-skin .qq-send-voice-item:disabled { opacity: .48; }
+html.codex-dream-skin .qq-send-voice-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M7 3a3 3 0 0 1 6 0v7a3 3 0 0 1-6 0z' fill='%2335acd4' stroke='%231b779c'/%3E%3Cpath d='M4 9a6 6 0 0 0 12 0M10 15v3M7 18h6' fill='none' stroke='%231b779c' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+html.codex-dream-skin .qq-history-panel {
+  position: fixed !important;
+  z-index: 1000 !important;
+  max-height: min(410px, 62vh);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #5ba9ca;
+  border-radius: 4px;
+  background: #f8fdff;
+  box-shadow: inset 0 1px white, 0 8px 24px rgba(21,79,107,.26);
+  color: #294a5c;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+html.codex-dream-skin .qq-history-panel-title {
+  min-height: 33px;
+  padding: 0 7px 0 9px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid #7fc2dc;
+  background: linear-gradient(180deg, #dff7ff, #a9def2 52%, #cef0fb);
+  color: #245c78;
+  text-shadow: 0 1px white;
+}
+html.codex-dream-skin .qq-history-panel-title .qq-history-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  --qq-tool-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 3h14v14H3z' fill='%23f6be34' stroke='%23b57914'/%3E%3Cpath d='M5 6h10M5 9h10M5 12h8M5 15h6' stroke='%23fff'/%3E%3C/svg%3E");
+  background-image: var(--qq-icons-art) !important;
+  background-size: 150px 25px !important;
+  background-position: -125px 0 !important;
+  background-repeat: no-repeat !important;
+  filter: none !important;
+}
+html.codex-dream-skin .qq-history-panel-title b { font-size: 12px; }
+html.codex-dream-skin .qq-history-close {
+  width: 22px;
+  height: 22px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  color: #397088;
+  font-size: 18px;
+  line-height: 18px;
+}
+html.codex-dream-skin .qq-history-close:hover { border-color: #79b7d0; background: rgba(255,255,255,.55); }
+html.codex-dream-skin .qq-history-search {
+  height: 34px;
+  margin: 8px 9px 4px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #9fc9da;
+  border-radius: 2px;
+  background: white;
+  box-shadow: inset 0 1px 2px rgba(46,99,122,.10);
+}
+html.codex-dream-skin .qq-history-search > span {
+  width: 13px;
+  height: 13px;
+  border: 2px solid #4f91af;
+  border-radius: 50%;
+  position: relative;
+}
+html.codex-dream-skin .qq-history-search > span::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  right: -5px;
+  bottom: -3px;
+  background: #4f91af;
+  transform: rotate(45deg);
+}
+html.codex-dream-skin .qq-history-search input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #294a5c;
+  font-size: 12px;
+}
+html.codex-dream-skin .qq-history-count { padding: 2px 10px 5px; color: #7390a0; font-size: 11px; }
+html.codex-dream-skin .qq-history-results { min-height: 55px; overflow: auto; padding: 0 6px 7px; }
+html.codex-dream-skin .qq-history-result {
+  width: 100%;
+  padding: 7px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  color: #345568;
+  text-align: left;
+}
+html.codex-dream-skin .qq-history-result:hover { border-color: #b5d6e3; background: #e9f7fc; }
+html.codex-dream-skin .qq-history-result-meta { color: #2183ae; font-size: 11px; }
+html.codex-dream-skin .qq-history-result-text { width: 100%; overflow: hidden; color: #344d5a; font-size: 12px; line-height: 1.45; text-overflow: ellipsis; }
+html.codex-dream-skin mark.qq-history-keyword {
+  padding: 0 1px;
+  border-radius: 1px;
+  background: #ffe45f;
+  color: #9b2e13;
+  font-weight: 700;
+  box-shadow: inset 0 -1px rgba(215,143,19,.30);
+}
+html.codex-dream-skin .qq-history-empty { padding: 24px 8px; color: #8aa0aa; font-size: 12px; text-align: center; }
+html.codex-dream-skin .qq-history-match { animation: qq-history-flash 1.8s ease-out; }
+@keyframes qq-history-flash {
+  0%, 35% { background: rgba(255,237,128,.68); box-shadow: 0 0 0 4px rgba(255,224,79,.24); }
+  100% { background: transparent; box-shadow: none; }
+}
+
+html.codex-dream-skin aside.app-shell-left-panel button[aria-label] svg,
+html.codex-dream-skin header button[aria-label] svg {
+  color: #267fa8 !important;
+  filter: drop-shadow(0 1px rgba(255,255,255,.92));
+}
+html.codex-dream-skin aside.app-shell-left-panel button[aria-label]:hover svg,
+html.codex-dream-skin header button[aria-label]:hover svg { color: #096f9f !important; }
+
+/* QQv2: classic transcript layout — metadata line first, message below. */
+html.codex-dream-skin [data-local-conversation-user-anchor].qq-user-record,
+html.codex-dream-skin [data-local-conversation-final-assistant].qq-assistant-record {
+  display: flex !important;
+  width: 100% !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  margin: 7px 0 13px !important;
+  padding: 0 8px 11px !important;
+  border-bottom: 1px dotted rgba(83,151,184,.28) !important;
+  background: transparent !important;
+}
+html.codex-dream-skin .qq-message-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-height: 21px;
+  margin-bottom: 2px;
+  font: 12px/1.55 "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  letter-spacing: .01em;
+  user-select: none;
+}
+html.codex-dream-skin .qq-message-name { font-weight: 700; }
+html.codex-dream-skin .qq-message-time { color: #8799a3; font-size: 11px; font-weight: 400; }
+html.codex-dream-skin .qq-message-meta-user .qq-message-name { color: #2367b3; }
+html.codex-dream-skin .qq-message-meta-assistant .qq-message-name { color: #27924c; }
+html.codex-dream-skin [data-user-message-bubble] {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 3px 8px 5px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #263b47 !important;
+  text-align: left !important;
+}
+html.codex-dream-skin [data-local-conversation-final-assistant] > :not(.qq-message-meta) {
+  margin-inline: 0 !important;
+}
+html.codex-dream-skin [data-assistant-message-sent-time] {
+  display: none !important;
+}
+
+html.codex-dream-skin [aria-label="复制消息"],
+html.codex-dream-skin [aria-label="复制"],
+html.codex-dream-skin [aria-label="回复优秀"],
+html.codex-dream-skin [aria-label="回复不佳"],
+html.codex-dream-skin [aria-label="从这里创建聊天分支"] {
+  border: 1px solid rgba(76,153,188,.32) !important;
+  border-radius: 4px !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(218,241,249,.92)) !important;
+  color: #377b98 !important;
+}
+
+/* QQ 2010 contact card in every task header. */
+html.codex-dream-skin .qq-task-native-title {
+  display: none !important;
+}
+html.codex-dream-skin .qq-task-profile {
+  display: grid !important;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 7px;
+  flex: 0 1 390px;
+  min-width: 0;
+  max-width: 390px;
+  height: 42px;
+  margin-left: 5px;
+  overflow: hidden;
+  pointer-events: none;
+  color: #243f4b;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  text-shadow: 0 1px rgba(255,255,255,.75);
+}
+html.codex-dream-skin .qq-task-avatar {
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 1px;
+  border: 1px solid #4b94b7;
+  border-radius: 2px;
+  background: #fff;
+  object-fit: cover;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.9), 0 1px 2px rgba(23,84,112,.28);
+}
+html.codex-dream-skin .qq-task-profile-lines {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  overflow: hidden;
+}
+html.codex-dream-skin .qq-task-profile-primary,
+html.codex-dream-skin .qq-task-profile-signature {
+  display: flex;
+  min-width: 0;
+  height: 18px;
+  align-items: center;
+  white-space: nowrap;
+}
+html.codex-dream-skin .qq-task-vip {
+  width: 39px;
+  height: 16px;
+  margin-right: 4px;
+  flex: none;
+  object-fit: contain;
+}
+html.codex-dream-skin .qq-task-name {
+  flex: none;
+  color: #213d49;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+}
+html.codex-dream-skin .qq-task-number {
+  margin-left: 3px;
+  overflow: hidden;
+  color: #395661;
+  font-size: 11px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+html.codex-dream-skin .qq-task-crown {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  flex: none;
+  object-fit: contain;
+}
+html.codex-dream-skin .qq-task-profile-signature {
+  overflow: hidden;
+  color: #526974;
+  font-size: 11px;
+  line-height: 17px;
+  text-overflow: ellipsis;
+}
+html.codex-dream-skin .qq-task-profile-signature > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* The normal task view uses the same QQ 2010 chrome. */
+html.codex-dream-skin article,
+html.codex-dream-skin [data-message-author-role] {
+  border-radius: 8px !important;
+  color: var(--qq-ink) !important;
+}
+html.codex-dream-skin [data-message-author-role="user"] {
+  border: 1px solid rgba(211,169,49,.42) !important;
+  background: linear-gradient(180deg, #fffdf1, #fff3bd) !important;
+  box-shadow: inset 0 1px white, 0 2px 7px rgba(84,111,122,.10) !important;
+}
+html.codex-dream-skin [data-message-author-role="assistant"] {
+  border-color: rgba(67,156,198,.24) !important;
+  background: rgba(255,255,255,.66) !important;
+}
+html.codex-dream-skin pre,
+html.codex-dream-skin .cm-editor,
+html.codex-dream-skin [data-testid*="code"] {
+  border: 1px solid rgba(50,139,181,.48) !important;
+  border-radius: 7px !important;
+  background: linear-gradient(180deg, #f8fdff, #e9f6fb) !important;
+  box-shadow: inset 0 1px white !important;
+  color: #17384a !important;
+}
+html.codex-dream-skin code:not(pre code) {
+  border: 1px solid rgba(56,148,190,.24) !important;
+  border-radius: 4px !important;
+  background: #e5f5fb !important;
+  color: #086d9e !important;
+}
+html.codex-dream-skin table {
+  border-color: rgba(53,145,188,.38) !important;
+  background: rgba(255,255,255,.90) !important;
+}
+html.codex-dream-skin th {
+  background: linear-gradient(180deg, #f7fdff, #d6eff9) !important;
+  color: #24627f !important;
+}
+html.codex-dream-skin td { border-color: rgba(53,145,188,.24) !important; }
+html.codex-dream-skin input,
+html.codex-dream-skin textarea,
+html.codex-dream-skin select {
+  border-color: rgba(55,149,193,.48) !important;
+  border-radius: 6px !important;
+  background: rgba(255,255,255,.96) !important;
+  color: var(--qq-ink) !important;
+  box-shadow: inset 0 1px 3px rgba(28,103,139,.08) !important;
+}
+html.codex-dream-skin [role="dialog"],
+html.codex-dream-skin [role="menu"],
+html.codex-dream-skin [role="listbox"] {
+  border: 1px solid rgba(51,145,190,.58) !important;
+  border-radius: 8px !important;
+  background: linear-gradient(180deg, rgba(250,254,255,.99), rgba(226,245,252,.99)) !important;
+  color: var(--qq-ink) !important;
+  box-shadow: inset 0 1px white, 0 10px 28px rgba(17,84,119,.22) !important;
+}
+html.codex-dream-skin [role="menuitem"]:hover,
+html.codex-dream-skin [role="option"]:hover,
+html.codex-dream-skin [role="option"][aria-selected="true"] {
+  background: linear-gradient(180deg, #fffbdc, #ffe98f) !important;
+  color: #334d57 !important;
+}
+html.codex-dream-skin ::selection { background: #9ee3fa !important; color: #163849 !important; }
+html.codex-dream-skin ::-webkit-scrollbar { width: 11px; height: 11px; }
+html.codex-dream-skin ::-webkit-scrollbar-track { background: rgba(218,241,250,.72); }
+html.codex-dream-skin ::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(235,249,254,.90);
+  border-radius: 8px;
+  background: linear-gradient(90deg, #9dd9ef, #49add6);
+}
+html.codex-dream-skin ::-webkit-scrollbar-thumb:hover { background: #299dcc; }
+
+@media (max-width: 1120px) {
+  .dream-polaroid { display: none !important; }
+  .dream-home { --thread-content-max-width: min(860px, calc(100cqw - 30px)) !important; }
+  .dream-home > div:first-child > div:first-child > div:first-child { width: calc(100% - 28px) !important; }
+}
+@media (max-width: 900px) {
+  .dream-signature { display: none !important; }
+  .dream-brand { left: 14px; }
+  .dream-home > div:first-child > div:first-child { flex-basis: 388px !important; min-height: 388px !important; }
+  .dream-home > div:first-child > div:first-child > div:first-child { height: 218px !important; min-height: 218px !important; }
+  .dream-home > div:first-child > div:first-child > div:first-child > div:first-child { padding-left: 25px; }
+  .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child { width: 66% !important; }
+  .dream-home [data-feature="game-source"] { font-size: 18px !important; }
+  .dream-home [data-feature="game-source"]::after { font-size: 12px; margin-top: 9px; }
+  .dream-home .group\/home-suggestions button { min-height: 111px !important; font-size: 12px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.codex-dream-skin * { transition-duration: 0s !important; }
+}

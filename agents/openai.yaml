@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex QQ2010 Skin"
+  short_description: "Install and maintain the full QQ2010-style Codex skin"
+  default_prompt: "Use $codex-qq2010-skin to install, repair, update, or restore the QQ2010-style Codex desktop skin."
