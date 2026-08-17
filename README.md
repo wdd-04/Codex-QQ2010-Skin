@@ -17,7 +17,7 @@
 ## 维护
 
 - Codex 更新后，或者发现皮肤失效时，先关闭 Codex，然后重新运行 `skin_install.cmd`。
-- 如果需要恢复官方界面，使用桌面上的 `Codex 2010 Skin - Restore` 快捷方式。
+- 如果需要恢复官方界面，使用 `Codex 2010 Skin - Restore` 。
 - 如果需要手动验证皮肤状态，运行：
   `scripts\verify-dream-skin.ps1`
 - 在复制或迁移该项目时，必须确保以下内容始终放在一起：
