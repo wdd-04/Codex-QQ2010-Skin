@@ -2,27 +2,33 @@
 
 # Codex QQ2010 Skin
 
-Apply the QQ2010 renderer skin to the official Microsoft Store Codex app through a local CDP session. Keep all native Codex controls functional.
+## 按以下顺序部署
 
-## Deploy in order
+1. 安装 Node.js 22 或更高版本，以及官方 Windows 版 Codex 应用。
+2. 将整个文件夹放置到：
+   `~\.codex\skills\Codex-QQ2010-Skin`
+3. 双击运行 `skin_install.cmd`。当提示时，允许执行一次 Codex 重启。
+4. 安装完成后，今后始终通过 `skin_install.cmd` 启动 Codex。
 
-1. Install Node.js 22 or newer and the official Codex Windows app.
-2. Put this complete folder at `%USERPROFILE%\.codex\skills\Codex-QQ2010-Skin`.
-3. Double-click `skin_install.cmd`. Approve the one-time Codex restart when prompted.
-4. After installation, always open Codex with the desktop shortcut `Codex 2010 Skin`.
+安装程序会启动 Codex、应用皮肤、验证实时注入是否成功，并创建“启动”和“恢复官方界面”两个快捷方式。
 
-The installer launches Codex, applies the skin, verifies the live injection, and creates both launch and restore shortcuts. Do not run it on every startup.
+不需要每次启动 Codex 时都重新运行安装程序。
 
-## Maintain
+## 维护
 
-- After a Codex update or when the skin is missing, close Codex and run `skin_install.cmd` again.
-- To restore the official interface, use `Codex 2010 Skin - Restore` on the desktop.
-- To verify manually, run `scripts\verify-dream-skin.ps1`.
-- Keep `assets`, `scripts`, `agents`, `SKILL.md`, `skin_install.cmd`, `skin_install.ps1`, `LICENSE`, and `NOTICE.md` together when copying the project.
+- Codex 更新后，或者发现皮肤失效时，先关闭 Codex，然后重新运行 `skin_install.cmd`。
+- 如果需要恢复官方界面，使用桌面上的 `Codex 2010 Skin - Restore` 快捷方式。
+- 如果需要手动验证皮肤状态，运行：
+  `scripts\verify-dream-skin.ps1`
+- 在复制或迁移该项目时，必须确保以下内容始终放在一起：
+  `assets`、`scripts`、`agents`、`SKILL.md`、`skin_install.cmd`、`skin_install.ps1`、`LICENSE` 和 `NOTICE.md`。
 
-## Guardrails
+## 安全限制
 
-- Never modify `WindowsApps`, `app.asar`, the official signature, accounts, tasks, or chat data.
-- Use only the loopback CDP endpoint created by these scripts.
-- Preserve native file, image, dictation, access-permission, model, send, stop, and continue actions.
-- Keep runtime state under `%LOCALAPPDATA%\CodexDreamSkin` for compatibility with existing installations.
+- 绝对不要修改 `WindowsApps`、`app.asar`、官方数字签名、账号、任务或聊天数据。
+- 只能使用这些脚本所创建的本机回环 CDP 端点。
+- 必须保留 Codex 原生的文件、图片、语音听写、权限访问、模型选择、发送、停止和继续等操作功能。
+- 运行时状态必须保存在：
+  `%LOCALAPPDATA%\CodexDreamSkin`
+  
+  以保证与已有安装版本兼容。
